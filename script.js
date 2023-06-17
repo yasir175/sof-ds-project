@@ -25,7 +25,7 @@ function operator(op) {
 	if (op == '+' || op == '-' ||
 		op == '^' || op == '*' ||
 		op == '/' || op == '(' ||
-		op == ')'|| op=='√') {
+		op == ')') {
 		return true;
 	}
 	else
@@ -34,7 +34,7 @@ function operator(op) {
 
 
 function precedency(pre) {
-	if (pre == '@' || pre == '(' || pre == ')') {
+	if ( pre == '(' || pre == ')') {
 		return 1;
 	}
 	else if (pre == '+' || pre == '-') {
@@ -56,7 +56,7 @@ function InfixtoPostfix() {
 
 	var postfix = [];
 	var temp = 0;
-	push('@');
+	push(')');
 	
 
 	
@@ -99,7 +99,7 @@ function InfixtoPostfix() {
 	}
 
 	postfix[temp++]=" ";
-	while (stackarr[topp] != '@') {
+	while (stackarr[topp] != ')') {
 		postfix[temp++] = pop();
 	}
 
@@ -131,7 +131,7 @@ function InfixtoPostfix() {
                     i++;
                     c = st[i];
                 }
-                i--;
+            
                 let float=parseFloat(n,10);
                 n="";
                 stack.push(float);
