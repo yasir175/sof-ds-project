@@ -20,10 +20,6 @@ body {
   text-align: center;
 }
 
-.mx-auto {
-  margin: auto;
-}
-
 .flex {
   display: flex;
 }
