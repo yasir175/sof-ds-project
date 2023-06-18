@@ -131,7 +131,7 @@ function InfixtoPostfix() {
                     i++;
                     c = st[i];
                 }
-            i--;
+            
                 let float=parseFloat(n,10);
                 n="";
                 stack.push(float);
